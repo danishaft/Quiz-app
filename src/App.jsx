@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import Quiz from "../components/Quiz"
+import first from "../public/blob 5.png"
+import second from "../public/blob 5 (1).png"
 
 function App() {
   // saving the data fetched into states
@@ -79,7 +81,7 @@ function App() {
   }
   return (
    <main>
-    <img src="/public/blob 5.png" alt="#" className='first' />
+    <img src={first} alt="#" className='first' />
      <Quiz 
       Quiz={questions}
       answerQuestion={answerQuestion}
@@ -89,7 +91,7 @@ function App() {
     {quizDone && <p>You scored {numCorrectAnswers}/5 correct answers</p>}
     <button className="check-answer" onClick={checkAnswers}>{quizDone ? "Play again" : "Check answers"}</button>
     </div>
-    <img src="/public/blob 5 (1).png" alt="#" className='second' />
+    <img src={second} alt="#" className='second' />
    </main>
   )
 }
